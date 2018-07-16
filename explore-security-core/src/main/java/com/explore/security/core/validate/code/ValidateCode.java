@@ -1,13 +1,15 @@
 package com.explore.security.core.validate.code;
 
 import java.awt.image.BufferedImage;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * Created by xiaohb on 2018/1/10.
  */
-public class ValidateCode {
+public class ValidateCode implements Serializable{
 
+    private static final long serialVersionUID = 8641975418791900911L;
 
     private String code;
 
@@ -23,7 +25,7 @@ public class ValidateCode {
         this.expireTime = expireTime;
     }
 
-    public Boolean isExpire(){
+    public Boolean isExpried(){
         return LocalDateTime.now().isAfter(expireTime);
     }
 

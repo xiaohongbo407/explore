@@ -52,6 +52,7 @@ public class SmsCodeAuthenticationToken extends AbstractAuthenticationToken{
         return this.principal;
     }
 
+    @Override
     public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
         if(isAuthenticated){
             throw new IllegalArgumentException(

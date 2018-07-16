@@ -10,6 +10,7 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <explore.security.version>1.0.0-SNAPSHOT</explore.security.version>
     </properties>
 
@@ -58,14 +59,15 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
                     <encoding>utf-8</encoding>
                     <useDefaultDelimiters>true</useDefaultDelimiters>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
+
     </build>
     <profiles>
         <profile>

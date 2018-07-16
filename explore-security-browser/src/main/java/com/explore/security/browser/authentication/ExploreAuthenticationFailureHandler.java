@@ -4,6 +4,7 @@ import com.explore.security.browser.support.SimpleResponse;
 import com.explore.security.core.properties.LoginType;
 import com.explore.security.core.properties.SecurityProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ import java.io.IOException;
 public class ExploreAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
+
     @Autowired
     private ObjectMapper objectMapper;
     @Autowired

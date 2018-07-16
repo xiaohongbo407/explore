@@ -10,8 +10,8 @@ import org.springframework.social.oauth2.OAuth2ServiceProvider;
  */
 public class QQConnectFactory extends OAuth2ConnectionFactory<QQ> {
 
-    public QQConnectFactory(String providerId, String appid,String appSecret) {
-        super(providerId, new QQServiceProvider(appid,appSecret), new QQAdpter());
+    public QQConnectFactory(String providerId, String appId,String appSecret) {
+        super(providerId, new QQServiceProvider(appId,appSecret), new QQAdpter());
     }
 
 }

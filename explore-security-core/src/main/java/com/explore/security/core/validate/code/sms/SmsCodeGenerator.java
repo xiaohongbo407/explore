@@ -28,5 +28,13 @@ public class SmsCodeGenerator implements ValidateCodeGenerator {
         return new ValidateCode(code,expireIn);
     }
 
+    public SecurityProperties getSecurityProperties() {
+        return securityProperties;
+    }
+
+    public void setSecurityProperties(SecurityProperties securityProperties) {
+        this.securityProperties = securityProperties;
+    }
+
 
 }

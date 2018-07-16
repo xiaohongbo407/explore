@@ -7,11 +7,17 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 public class BrowserProperties {
 
-    private String loginPage = "/explore-signIn.html";
+    private SessionProperties session = new SessionProperties();
+
+    private String loginPage = SecurityConstants.DEFAULT_LOGIN_PAGE_URL;
+
+    private String signUpUrl = SecurityConstants.DEFAULT_SIGNIN_PAGE_URL;
+
+    private String signOutUrl;
 
     private LoginType loginType = LoginType.JSON;
 
-    private int rememberMeSeconds = 3600;
+    private int rememberMeSeconds = SecurityConstants.DEFAULT_REMEMBER_ME_SECONDS;
 
     public String getLoginPage() {
         return loginPage;
@@ -19,6 +25,14 @@ public class BrowserProperties {
 
     public void setLoginPage(String loginPage) {
         this.loginPage = loginPage;
+    }
+
+    public String getSignUpUrl() {
+        return signUpUrl;
+    }
+
+    public void setSignUpUrl(String signUpUrl) {
+        this.signUpUrl = signUpUrl;
     }
 
     public LoginType getLoginType() {
@@ -35,5 +49,21 @@ public class BrowserProperties {
 
     public void setRememberMeSeconds(int rememberMeSeconds) {
         this.rememberMeSeconds = rememberMeSeconds;
+    }
+
+    public SessionProperties getSession() {
+        return session;
+    }
+
+    public void setSession(SessionProperties session) {
+        this.session = session;
+    }
+
+    public String getSignOutUrl() {
+        return signOutUrl;
+    }
+
+    public void setSignOutUrl(String signOutUrl) {
+        this.signOutUrl = signOutUrl;
     }
 }

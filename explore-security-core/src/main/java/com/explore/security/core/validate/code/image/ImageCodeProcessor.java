@@ -1,6 +1,7 @@
 package com.explore.security.core.validate.code.image;
 
 import com.explore.security.core.validate.code.impl.AbstractValidateCodeProcessor;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import javax.imageio.ImageIO;
@@ -11,6 +12,8 @@ import javax.imageio.ImageIO;
  * @author: XiaoHongBo
  * @create: 2018-03-28 16:45
  **/
+
+@Component("imageValidateCodeProcessor")
 public class ImageCodeProcessor extends AbstractValidateCodeProcessor<ImageCode> {
     /**
      * 发送图形验证码，将其写到响应中
